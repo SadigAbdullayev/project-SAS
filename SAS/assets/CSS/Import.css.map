@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "Import.scss",
+        "../SASS/variable/_variables.scss",
+        "../SASS/extent/_extents.scss",
+        "../SASS/pages/_home.scss"
+    ],
+    "names": [],
+    "file": "Import.css"
+}
