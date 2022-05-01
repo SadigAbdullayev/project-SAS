@@ -1,38 +1,113 @@
-.navbar-1{
-	display: flex;
-	background-color: $color-orange;
-	border-bottom: 1px solid $color-orange-dark ;
-	.container{
-		img{
-			height: 100px;
-		}
-		input{
-			width: 450px;
-			height: 60px;
-			border-radius: 50px;
-			border: none;
-			padding: 10px;
-			cursor: pointer;
-		}
-		button{
-			margin-left: -60px;
-			border: none;
-			border-radius: 50px;
-			padding: 9px;
-			width: 60px;
-			background-color: $color-blue;
-
-			i{
-				color: $color-white;
-				font-size: 25px;
-			}
-		}
-	}
+a {
+    text-decoration: none;
+    color: $color-white;
 }
-.navbar-2{
-	.container{
-		.col-lg-3{
-			text-align: center;
-		}
-	}
+
+li {
+    list-style-type: none;
+}
+
+.navbar-1 {
+    background-color: $color-orange;
+    border-bottom: 1px solid $color-orange-dark;
+    padding: 5px;
+    text-align: center;
+
+    .container {
+        .nav {
+            align-items: center;
+
+            .left {
+                img {
+                    height: 50px;
+                }
+            }
+
+            .right {
+                display: flex;
+
+                .login {
+                    a {
+                        @extend #transition;
+                        @extend #hover-color-white;
+                    }
+                }
+
+                .add {
+                    a{
+                        @extend #transition;
+                        @extend #hover-color-white;
+                    }
+                }
+
+            }
+        }
+    }
+
+}
+
+.navbar-2 {
+    position: absolute;
+    width: 100%;
+    white-space: nowrap;
+    background-color: $color-orange;
+    border-bottom: 1px solid $color-orange;
+    box-shadow: 0 5px 6px 0 $color-orange-dark;
+
+    .container {
+        display: flex;
+        text-align: center;
+        padding: 13px;
+
+        .link {
+            a {
+                padding: 16px;
+                @extend #transition;
+                color: $color-white;
+
+                &:hover {
+                    background-color: $color-orange-dark;
+                }
+            }
+        }
+    }
+}
+
+.navbar-3 {
+    margin-top: 51px;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    overflow: unset;
+    padding: 20px;
+    // position: relative;
+    // outline: hidden;
+    // z-index: 10;
+
+    input {
+        width: 500px;
+        border: 1px solid $color-grey;
+        outline: none;
+        height: 40px;
+        border-radius: 5px;
+        margin-right: -1px;
+        color: $color-grey;
+    }
+
+    button {
+        border-radius: 5px;
+        border: none;
+        color: $color-white;
+        background-color: $color-orange;
+        height: 39px;
+        @extend #transition;
+
+        i {
+            font-size: 13px;
+        }
+
+        &:hover {
+            background-color: $color-orange-dark;
+        }
+    }
 }

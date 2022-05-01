@@ -1,39 +1,103 @@
+#transition, .navbar-1 .container .nav .right .login a, .navbar-1 .container .nav .right .add a, .navbar-2 .container .link a, .navbar-3 button {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#hover-color-white:hover, .navbar-1 .container .nav .right .login a:hover, .navbar-1 .container .nav .right .add a:hover {
+  color: #8b7d77;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
 .navbar-1 {
+  background-color: #FF9100;
+  border-bottom: 1px solid #de8108;
+  padding: 5px;
+  text-align: center;
+}
+
+.navbar-1 .container .nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-1 .container .nav .left img {
+  height: 50px;
+}
+
+.navbar-1 .container .nav .right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.navbar-2 {
+  position: absolute;
+  width: 100%;
+  white-space: nowrap;
   background-color: #FF9100;
-  border-bottom: 1px solid #db7d02;
+  border-bottom: 1px solid #FF9100;
+  -webkit-box-shadow: 0 5px 6px 0 #de8108;
+          box-shadow: 0 5px 6px 0 #de8108;
 }
 
-.navbar-1 .container img {
-  height: 100px;
-}
-
-.navbar-1 .container input {
-  width: 450px;
-  height: 60px;
-  border-radius: 50px;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.navbar-1 .container button {
-  margin-left: -60px;
-  border: none;
-  border-radius: 50px;
-  padding: 9px;
-  width: 60px;
-  background-color: blue;
-}
-
-.navbar-1 .container button i {
-  color: white;
-  font-size: 25px;
-}
-
-.navbar-2 .container .col-lg-3 {
+.navbar-2 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   text-align: center;
+  padding: 13px;
+}
+
+.navbar-2 .container .link a {
+  padding: 16px;
+  color: white;
+}
+
+.navbar-2 .container .link a:hover {
+  background-color: #de8108;
+}
+
+.navbar-3 {
+  margin-top: 51px;
+  text-align: center;
+  width: 100%;
+  height: 80px;
+  overflow: unset;
+  padding: 20px;
+}
+
+.navbar-3 input {
+  width: 500px;
+  border: 1px solid #8b7d77;
+  outline: none;
+  height: 40px;
+  border-radius: 5px;
+  margin-right: -1px;
+  color: #8b7d77;
+}
+
+.navbar-3 button {
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: #FF9100;
+  height: 39px;
+}
+
+.navbar-3 button i {
+  font-size: 13px;
+}
+
+.navbar-3 button:hover {
+  background-color: #de8108;
 }
 /*# sourceMappingURL=Import.css.map */

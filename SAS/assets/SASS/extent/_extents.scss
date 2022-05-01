@@ -1,0 +1,8 @@
+#transition{
+    transition: all 0.3s;
+}
+#hover-color-white{
+    &:hover{
+        color: $color-grey
+    }
+}
