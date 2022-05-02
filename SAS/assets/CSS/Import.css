@@ -1,13 +1,20 @@
-#transition, .navbar-2 .container ul li a {
+#transition, .scrollTop, .navbar-2 .container ul li a {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 #premium-vip, #premium .container .cards .body-2 .premium, #premium .container .cards .body-2 .vip, #premium .container .cards .body-3 span, #other .container .cards .body-2 .premium, #other .container .cards .body-2 .vip, #other .container .cards .body-3 span {
-  padding: 5px;
+  padding: 7px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: white;
   border-radius: 40px;
-  font-size: 13px;
+  font-size: 12px;
+}
+
+body {
+  scroll-behavior: smooth;
 }
 
 a {
@@ -17,6 +24,44 @@ a {
 li {
   list-style: none;
   display: inline;
+}
+
+html::-webkit-scrollbar {
+  width: 1vw;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #3294d6;
+  border: 1px solid #0373e2;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #0373e2;
+}
+
+html::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px grey;
+          box-shadow: inset 0 0 5px grey;
+}
+
+.scrollTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 15px;
+  background-color: #3294d6;
+  color: #ffffffd0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.scrollTop:hover {
+  background-color: #0373e2;
+  color: white;
+}
+
+.scrollTop i {
+  margin: 2px;
 }
 
 .navbar-1 {
@@ -52,6 +97,7 @@ li {
   width: 350px;
   border: none;
   outline: none;
+  margin-left: 13px;
 }
 
 .navbar-1 .container .search-box button {
@@ -72,7 +118,7 @@ li {
 }
 
 .navbar-1 .container .fav a:hover i {
-  color: red;
+  color: #ff0000;
 }
 
 .navbar-1 .container .add a {
@@ -112,7 +158,7 @@ li {
 }
 
 .navbar-1 .container .buy-vip a:hover .VIP {
-  color: #fffb00;
+  color: #ffff00;
 }
 
 .navbar-2 {
@@ -131,6 +177,8 @@ li {
   white-space: nowrap;
   color: #ffffffd0;
   padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .navbar-2 .container ul li a:hover {
@@ -164,7 +212,7 @@ li {
 #premium .container .cards .body-1 {
   padding: 10px;
   font-weight: bold;
-  color: black;
+  color: #000000;
 }
 
 #premium .container .cards .body-2 {
@@ -172,7 +220,7 @@ li {
 }
 
 #premium .container .cards .body-2 .premium {
-  background-color: purple;
+  background-color: #800080;
 }
 
 #premium .container .cards .body-2 .vip {
@@ -186,6 +234,12 @@ li {
 
 #premium .container .cards .body-3 span {
   background-color: #3294d6;
+}
+
+#premium .container .cards .body-3 i {
+  margin-left: 30px;
+  font-size: 20px;
+  color: #ff0000;
 }
 
 #other {
@@ -222,7 +276,7 @@ li {
 }
 
 #other .container .cards .body-2 .premium {
-  background-color: purple;
+  background-color: #800080;
 }
 
 #other .container .cards .body-2 .vip {
@@ -236,5 +290,11 @@ li {
 
 #other .container .cards .body-3 span {
   background-color: #3294d6;
+}
+
+#other .container .cards .body-3 i {
+  margin-left: 70px;
+  font-size: 20px;
+  color: #ff0000;
 }
 /*# sourceMappingURL=Import.css.map */
