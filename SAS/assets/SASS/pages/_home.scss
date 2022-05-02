@@ -1,11 +1,15 @@
 a {
     text-decoration: none;
-    color: $color-fifth;
+}
+
+li {
+    list-style: none;
+    display: inline;
 }
 
 .navbar-1 {
     background-color: $color-second;
-
+    border-bottom: 1px solid $color-third; //////////
     padding: 4px;
 
     .container {
@@ -42,6 +46,8 @@ a {
 
         .fav {
             a {
+                color: $color-fifth;
+
                 i {
                     color: $color-fifth;
                 }
@@ -58,12 +64,14 @@ a {
 
         .add {
             a {
+                color: $color-fifth;
+
                 span {
                     &:hover {
                         i {
                             color: $color-green;
                         }
-    
+
                         color: $color-first;
                     }
                 }
@@ -72,6 +80,8 @@ a {
 
         .account {
             a {
+                color: $color-fifth;
+
                 i {
                     color: $color-fifth;
                 }
@@ -83,6 +93,164 @@ a {
 
                     color: $color-first;
                 }
+            }
+        }
+
+        .buy-vip {
+            a {
+                color: $color-fifth;
+
+                &:hover {
+                    .VIP {
+                        color: $color-yellow-2;
+                    }
+
+                    color: $color-first;
+                }
+            }
+        }
+    }
+}
+
+.navbar-2 {
+    background-color: $color-second;
+
+    .container {
+        text-align: center;
+
+        ul {
+            padding: 13px;
+
+            li {
+                a {
+                    white-space: nowrap;
+                    color: $color-fifth;
+                    padding: 15px;
+                    @extend #transition;
+
+                    &:hover {
+                        color: $color-first;
+                        background-color: $color-third;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#premium {
+    margin-top: 2%;
+
+    .container {
+        .header {
+            font-size: 20px;
+            border-left: 1px solid $color-second;
+            padding-left: 7px;
+            font-weight: 600;
+
+            // background-image: linear-gradient(to right, $color-third , $color-first;
+        }
+
+        .cards {
+            margin-top: 2%;
+
+            .card {
+                width: 15rem;
+                margin-left: 2%;
+                margin-bottom: 2%;
+                display: inline-block;
+                text-align: start;
+            }
+
+            .body-1 {
+                padding: 10px;
+                font-weight: bold;
+                color: black;
+            }
+
+            .body-2 {
+                padding: 10px;
+
+                .premium {
+                    background-color: $color-purple;
+                    @extend #premium-vip;
+
+                }
+
+                .vip {
+                    background-color: $color-yellow;
+                    @extend #premium-vip;
+                }
+            }
+
+            .body-3 {
+                span {
+                    background-color: $color-second;
+                    @extend #premium-vip;
+                }
+
+                padding-left: 10px;
+                padding-bottom: 10px;
+
+            }
+        }
+    }
+}
+#other{
+    margin-top: 2%;
+
+    .container {
+        .header {
+            font-size: 20px;
+            border-left: 1px solid $color-second;
+            padding-left: 7px;
+            font-weight: 600;
+
+            // background-image: linear-gradient(to right, $color-third , $color-first;
+        }
+
+        .cards {
+            margin-top: 2%;
+
+            .card {
+                width: 15rem;
+                margin-left: 2%;
+                margin-bottom: 2%;
+                display: inline-block;
+                text-align: start;
+            }
+
+            .body-1 {
+                padding: 10px;
+                font-weight: bold;
+                color: black;
+
+            }
+
+            .body-2 {
+                padding: 10px;
+
+                .premium {
+                    background-color: $color-purple;
+                    @extend #premium-vip;
+
+                }
+
+                .vip {
+                    background-color: $color-yellow;
+                    @extend #premium-vip;
+                }
+            }
+
+            .body-3 {
+                span {
+                    background-color: $color-second;
+                    @extend #premium-vip;
+                }
+
+                padding-left: 10px;
+                padding-bottom: 10px;
+
             }
         }
     }

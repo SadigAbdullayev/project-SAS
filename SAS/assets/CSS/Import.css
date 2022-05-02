@@ -1,15 +1,27 @@
-#transition {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+#transition, .navbar-2 .container ul li a {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#premium-vip, #premium .container .cards .body-2 .premium, #premium .container .cards .body-2 .vip, #premium .container .cards .body-3 span, #other .container .cards .body-2 .premium, #other .container .cards .body-2 .vip, #other .container .cards .body-3 span {
+  padding: 5px;
+  color: white;
+  border-radius: 40px;
+  font-size: 13px;
 }
 
 a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.815);
+}
+
+li {
+  list-style: none;
+  display: inline;
 }
 
 .navbar-1 {
-  background-color: #167fe7;
+  background-color: #3294d6;
+  border-bottom: 1px solid #0373e2;
   padding: 4px;
 }
 
@@ -47,8 +59,12 @@ a {
   border: none;
 }
 
+.navbar-1 .container .fav a {
+  color: #ffffffd0;
+}
+
 .navbar-1 .container .fav a i {
-  color: rgba(255, 255, 255, 0.815);
+  color: #ffffffd0;
 }
 
 .navbar-1 .container .fav a:hover {
@@ -59,16 +75,24 @@ a {
   color: red;
 }
 
+.navbar-1 .container .add a {
+  color: #ffffffd0;
+}
+
 .navbar-1 .container .add a span:hover {
   color: white;
 }
 
 .navbar-1 .container .add a span:hover i {
-  color: #67c008;
+  color: #7aff00;
+}
+
+.navbar-1 .container .account a {
+  color: #ffffffd0;
 }
 
 .navbar-1 .container .account a i {
-  color: rgba(255, 255, 255, 0.815);
+  color: #ffffffd0;
 }
 
 .navbar-1 .container .account a:hover {
@@ -77,5 +101,140 @@ a {
 
 .navbar-1 .container .account a:hover i {
   color: blue;
+}
+
+.navbar-1 .container .buy-vip a {
+  color: #ffffffd0;
+}
+
+.navbar-1 .container .buy-vip a:hover {
+  color: white;
+}
+
+.navbar-1 .container .buy-vip a:hover .VIP {
+  color: #fffb00;
+}
+
+.navbar-2 {
+  background-color: #3294d6;
+}
+
+.navbar-2 .container {
+  text-align: center;
+}
+
+.navbar-2 .container ul {
+  padding: 13px;
+}
+
+.navbar-2 .container ul li a {
+  white-space: nowrap;
+  color: #ffffffd0;
+  padding: 15px;
+}
+
+.navbar-2 .container ul li a:hover {
+  color: white;
+  background-color: #0373e2;
+}
+
+#premium {
+  margin-top: 2%;
+}
+
+#premium .container .header {
+  font-size: 20px;
+  border-left: 1px solid #3294d6;
+  padding-left: 7px;
+  font-weight: 600;
+}
+
+#premium .container .cards {
+  margin-top: 2%;
+}
+
+#premium .container .cards .card {
+  width: 15rem;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  display: inline-block;
+  text-align: start;
+}
+
+#premium .container .cards .body-1 {
+  padding: 10px;
+  font-weight: bold;
+  color: black;
+}
+
+#premium .container .cards .body-2 {
+  padding: 10px;
+}
+
+#premium .container .cards .body-2 .premium {
+  background-color: purple;
+}
+
+#premium .container .cards .body-2 .vip {
+  background-color: #dfab03;
+}
+
+#premium .container .cards .body-3 {
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+#premium .container .cards .body-3 span {
+  background-color: #3294d6;
+}
+
+#other {
+  margin-top: 2%;
+}
+
+#other .container .header {
+  font-size: 20px;
+  border-left: 1px solid #3294d6;
+  padding-left: 7px;
+  font-weight: 600;
+}
+
+#other .container .cards {
+  margin-top: 2%;
+}
+
+#other .container .cards .card {
+  width: 15rem;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  display: inline-block;
+  text-align: start;
+}
+
+#other .container .cards .body-1 {
+  padding: 10px;
+  font-weight: bold;
+  color: black;
+}
+
+#other .container .cards .body-2 {
+  padding: 10px;
+}
+
+#other .container .cards .body-2 .premium {
+  background-color: purple;
+}
+
+#other .container .cards .body-2 .vip {
+  background-color: #dfab03;
+}
+
+#other .container .cards .body-3 {
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+#other .container .cards .body-3 span {
+  background-color: #3294d6;
 }
 /*# sourceMappingURL=Import.css.map */
