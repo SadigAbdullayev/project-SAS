@@ -1,113 +1,89 @@
 a {
     text-decoration: none;
-    color: $color-white;
-}
-
-li {
-    list-style-type: none;
+    color: $color-fifth;
 }
 
 .navbar-1 {
-    background-color: $color-orange;
-    border-bottom: 1px solid $color-orange-dark;
-    padding: 5px;
-    text-align: center;
+    background-color: $color-second;
+
+    padding: 4px;
 
     .container {
-        .nav {
-            align-items: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
-            .left {
+        .logo {
+            a {
                 img {
                     height: 50px;
                 }
             }
+        }
 
-            .right {
-                display: flex;
+        .search-box {
+            padding: 7px;
+            border-radius: 20px;
+            background-color: $color-first;
 
-                .login {
-                    a {
-                        @extend #transition;
-                        @extend #hover-color-white;
-                    }
-                }
+            input {
+                background: none;
+                width: 350px;
+                border: none;
+                outline: none;
+            }
 
-                .add {
-                    a{
-                        @extend #transition;
-                        @extend #hover-color-white;
-                    }
-                }
+            button {
+                background: none;
+                border: none;
 
             }
         }
-    }
 
-}
-
-.navbar-2 {
-    position: absolute;
-    width: 100%;
-    white-space: nowrap;
-    background-color: $color-orange;
-    border-bottom: 1px solid $color-orange;
-    box-shadow: 0 5px 6px 0 $color-orange-dark;
-
-    .container {
-        display: flex;
-        text-align: center;
-        padding: 13px;
-
-        .link {
+        .fav {
             a {
-                padding: 16px;
-                @extend #transition;
-                color: $color-white;
+                i {
+                    color: $color-fifth;
+                }
 
                 &:hover {
-                    background-color: $color-orange-dark;
+                    i {
+                        color: $color-red;
+                    }
+
+                    color: $color-first;
                 }
             }
         }
-    }
-}
 
-.navbar-3 {
-    margin-top: 51px;
-    text-align: center;
-    width: 100%;
-    height: 80px;
-    overflow: unset;
-    padding: 20px;
-    // position: relative;
-    // outline: hidden;
-    // z-index: 10;
-
-    input {
-        width: 500px;
-        border: 1px solid $color-grey;
-        outline: none;
-        height: 40px;
-        border-radius: 5px;
-        margin-right: -1px;
-        color: $color-grey;
-    }
-
-    button {
-        border-radius: 5px;
-        border: none;
-        color: $color-white;
-        background-color: $color-orange;
-        height: 39px;
-        @extend #transition;
-
-        i {
-            font-size: 13px;
+        .add {
+            a {
+                span {
+                    &:hover {
+                        i {
+                            color: $color-green;
+                        }
+    
+                        color: $color-first;
+                    }
+                }
+            }
         }
 
-        &:hover {
-            background-color: $color-orange-dark;
+        .account {
+            a {
+                i {
+                    color: $color-fifth;
+                }
+
+                &:hover {
+                    i {
+                        color: blue;
+                    }
+
+                    color: $color-first;
+                }
+            }
         }
     }
 }
