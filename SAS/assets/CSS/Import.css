@@ -1,4 +1,4 @@
-#transition, #scrollTop .scrollTop, html .scrollTop, .navbar-2 .container ul li a, #premium .container .cards .card .card-body, #premium .container .cards .card .card-body .logo {
+#transition, #scrollTop .scrollTop, html .scrollTop, #cards .cards .card .card-body, #premium .container .cards .card .card-body, #other .container .cards .card .card-body, #cards .cards .card .card-body .logo, #premium .container .cards .card .card-body .logo, #other .container .cards .card .card-body .logo, #cards .cards .card .card-body .details .body-3 .btn-fav, #premium .container .cards .card .card-body .details .body-3 .btn-fav, #other .container .cards .card .card-body .details .body-3 .btn-fav, .navbar-2 .container ul li a {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -52,6 +52,99 @@
 
 #scrollTop .scrollTop i, html .scrollTop i {
   margin: 2px;
+}
+
+#body-header .header, #premium .container .header, #other .container .header {
+  font-weight: bold;
+  margin-left: 4%;
+  font-size: 20px;
+  border-left: 1px solid #0373e2;
+  padding-left: 15px;
+}
+
+#cards .cards, #premium .container .cards, #other .container .cards {
+  margin-top: 2%;
+  text-align: center;
+}
+
+#cards .cards .card, #premium .container .cards .card, #other .container .cards .card {
+  border: none;
+  margin-left: 2%;
+  width: 15rem;
+  margin-bottom: 2%;
+  display: inline-block;
+}
+
+#cards .cards .card .card-body, #premium .container .cards .card .card-body, #other .container .cards .card .card-body {
+  background-color: #3294d6;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 30px #0000003d;
+          box-shadow: 0 0 30px #0000003d;
+  padding: 0;
+}
+
+#cards .cards .card .card-body:hover, #premium .container .cards .card .card-body:hover, #other .container .cards .card .card-body:hover {
+  background-color: #0373e2;
+}
+
+#cards .cards .card .card-body .logo, #premium .container .cards .card .card-body .logo, #other .container .cards .card .card-body .logo {
+  position: relative;
+  -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
+          clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
+}
+
+#cards .cards .card .card-body .logo img, #premium .container .cards .card .card-body .logo img, #other .container .cards .card .card-body .logo img {
+  height: 180px;
+  width: 100%;
+  display: block;
+  border-radius: 5px 5px 0px 0px;
+}
+
+#cards .cards .card .card-body .logo:hover, #premium .container .cards .card .card-body .logo:hover, #other .container .cards .card .card-body .logo:hover {
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
+}
+
+#cards .cards .card .card-body .details, #premium .container .cards .card .card-body .details, #other .container .cards .card .card-body .details {
+  text-align: start;
+  color: white;
+}
+
+#cards .cards .card .card-body .details .body-1, #premium .container .cards .card .card-body .details .body-1, #other .container .cards .card .card-body .details .body-1 {
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+#cards .cards .card .card-body .details .body-2, #premium .container .cards .card .card-body .details .body-2, #other .container .cards .card .card-body .details .body-2 {
+  padding-left: 10px;
+  padding-top: 7px;
+  padding-bottom: 5px;
+}
+
+#cards .cards .card .card-body .details .body-2 span, #premium .container .cards .card .card-body .details .body-2 span, #other .container .cards .card .card-body .details .body-2 span {
+  text-align: center;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: #dfab03;
+}
+
+#cards .cards .card .card-body .details .body-3, #premium .container .cards .card .card-body .details .body-3, #other .container .cards .card .card-body .details .body-3 {
+  padding-left: 5px;
+  padding-bottom: 10px;
+}
+
+#cards .cards .card .card-body .details .body-3 .btn-fav, #premium .container .cards .card .card-body .details .body-3 .btn-fav, #other .container .cards .card .card-body .details .body-3 .btn-fav {
+  border: none;
+  background: none;
+  color: #e7e7e7;
+}
+
+#cards .cards .card .card-body .details .body-3 .btn-fav .add-fav, #premium .container .cards .card .card-body .details .body-3 .btn-fav .add-fav, #other .container .cards .card .card-body .details .body-3 .btn-fav .add-fav {
+  font-size: 25px;
+}
+
+#cards .cards .card .card-body .details .body-3 .btn-fav:hover, #premium .container .cards .card .card-body .details .body-3 .btn-fav:hover, #other .container .cards .card .card-body .details .body-3 .btn-fav:hover {
+  color: #ff0000;
 }
 
 .navbar-1 {
@@ -185,65 +278,7 @@
   margin-top: 2%;
 }
 
-#premium .container .cards {
+#other {
   margin-top: 2%;
-  text-align: center;
-}
-
-#premium .container .cards .card {
-  border: none;
-  margin-left: 2%;
-  width: 15rem;
-  margin-bottom: 2%;
-  display: inline-block;
-}
-
-#premium .container .cards .card .card-body {
-  background-color: #3294d6;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 0 30px #0000003d;
-          box-shadow: 0 0 30px #0000003d;
-  padding: 0;
-}
-
-#premium .container .cards .card .card-body .logo {
-  position: relative;
-  -webkit-clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
-          clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
-}
-
-#premium .container .cards .card .card-body .logo img {
-  height: 180px;
-  width: 100%;
-  display: block;
-  border-radius: 5px 5px 0px 0px;
-}
-
-#premium .container .cards .card .card-body .logo:hover {
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
-          clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
-}
-
-#premium .container .cards .card .card-body .details {
-  padding: 20px 8px;
-  text-align: start;
-  color: white;
-}
-
-#premium .container .cards .card .card-body .details h3 {
-  font-size: 16px;
-  font-weight: 600;
-  margin: 10px 0 15px 0;
-}
-
-#premium .container .cards .card .card-body .details .VIP {
-  margin-left: 24%;
-  background-color: #dfab03;
-  padding: 7px;
-  border-radius: 30px;
-}
-
-#premium .container .cards .card .card-body:hover {
-  background-color: #0373e2;
 }
 /*# sourceMappingURL=Import.css.map */
