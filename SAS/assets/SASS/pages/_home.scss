@@ -147,53 +147,65 @@ html {
 }
 
 #premium {
+    margin-top: 2%;
+
     .container {
-        .row {
-            .cards {
-                display: flex;
-                .card {
-                    place-items: center;
-                    border: none;
-                    .card-body {
+        .cards {
+            margin-top: 2%;
+            text-align: center;
+
+            .card {
+                border: none;
+                margin-left: 2%;
+                width: 15rem;
+                margin-bottom: 2%;
+                display: inline-block;
+
+                .card-body {
+                    @extend #transition;
+                    background-color: $color-blue-light;
+                    border-radius: 5px;
+                    box-shadow: 0 0 30px $color-black-light;
+                    padding: 0;
+
+                    .logo {
+                        position: relative;
+                        clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
                         @extend #transition;
-                        background-color: $color-blue-light;
-                        border-radius: 5px;
-                        box-shadow: 0 0 30px $color-black-light;
-                        padding: 0;
 
-                        .logo {
-                            position: relative;
-                            clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
-                            @extend #transition;
-
-                            img {
-                                height: 180px;
-                                width: 100%;
-                                display: block;
-                                border-radius: 5px 5px 0px 0px;
-                            }
-
-                            &:hover {
-                                clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
-                            }
+                        img {
+                            height: 180px;
+                            width: 100%;
+                            display: block;
+                            border-radius: 5px 5px 0px 0px;
                         }
-
-                        .details {
-                            padding: 20px 10px;
-
-                            h3 {
-                                color: $color-white;
-                                font-size: 16px;
-                                font-weight: 600;
-                                margin: 10px 0 15px 0;
-                            }
-                        }
-
 
                         &:hover {
-                            background-color: $color-blue;
-                            margin-top: -5px;
+                            clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 100%);
                         }
+                    }
+
+                    .details {
+                        padding: 20px 8px;
+                        text-align: start;
+                        color: $color-white;
+
+                        h3 {
+                            font-size: 16px;
+                            font-weight: 600;
+                            margin: 10px 0 15px 0;
+                        }
+                        .VIP{
+                            margin-left: 24%;
+                            background-color: $color-yellow;
+                            padding: 7px;
+                            border-radius: 30px;
+                        }
+                    }
+
+
+                    &:hover {
+                        background-color: $color-blue;
                     }
                 }
             }
