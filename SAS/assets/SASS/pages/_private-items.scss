@@ -29,6 +29,33 @@ html {
         }
 
         .search-box {
+            display: flex;
+
+            padding: 7px;
+            border-radius: 20px;
+            background-color: $color-white;
+
+            input {
+
+                background: none;
+                width: 350px;
+                border: none;
+                outline: none;
+                margin-left: 13px;
+
+                &:focus {
+                    color: $color-blue;
+                }
+            }
+
+            button {
+                background: none;
+                border: none;
+
+                i {
+                    color: $color-gray;
+                }
+            }
 
         }
 
@@ -131,89 +158,3 @@ html {
 /// HEADER PART END
 
 /// MAIN PART START
-#premium {
-    margin-top: 2%;
-
-    .container {
-        @extend #body-header;
-        @extend #cards;
-    }
-}
-
-#other {
-    margin-top: 2%;
-
-    .container {
-        @extend #body-header;
-        @extend #cards;
-    }
-}
-
-/// MAIN PART END
-
-/// FOOTER PART START
-#letter {
-    margin-top: 8%;
-
-    .letter-box {
-        width: 100%;
-        height: 250px;
-        background-color: $color-blue-light;
-        position: relative;
-
-        .letter-text-box {
-            position: absolute;
-            z-index: 100;
-            left: 10%;
-            top: 35%;
-            color: $color-white;
-
-            .input-box {
-                position: relative;
-                margin-top: 7%;
-
-                input {
-                    outline: none;
-                    cursor: pointer;
-                    width: 470px;
-                    height: 62px;
-                    border-radius: 4px;
-                    border: none;
-                    padding-left: 50px;
-                }
-
-                i {
-                    position: absolute;
-                    top: 31%;
-                    font-size: 25px;
-                    left: 2%;
-                    color: $color-gray;
-                }
-
-                .btn {
-                    right: 1%;
-                    top: 10%;
-                    position: absolute;
-                    height: 50px;
-                    background-color: $color-blue-light;
-                    border: none;
-
-                    &:hover {
-                        background-color: $color-blue;
-                    }
-                }
-            }
-        }
-
-        img {
-            position: absolute;
-            right: 11%;
-            top: 2%;
-            height: 245px;
-            bottom: 0%;
-            z-index: 1;
-        }
-    }
-}
-
-/// FOOTER PART END
