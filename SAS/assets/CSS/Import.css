@@ -1,4 +1,4 @@
-#transition, #scrollTop .scrollTop, html .scrollTop, #cards .cards .card .card-body, #premium .container .cards .card .card-body, #other .container .cards .card .card-body, #cards .cards .card .card-body .logo, #premium .container .cards .card .card-body .logo, #other .container .cards .card .card-body .logo, #cards .cards .card .card-body .details .body-3 .btn-fav, #premium .container .cards .card .card-body .details .body-3 .btn-fav, #other .container .cards .card .card-body .details .body-3 .btn-fav, .navbar-2 .container ul li a {
+#transition, #scrollTop .scrollTop, html .scrollTop, #cards .cards .card .card-body, #premium .container .cards .card .card-body, #other .container .cards .card .card-body, #cards .cards .card .card-body .logo, #premium .container .cards .card .card-body .logo, #other .container .cards .card .card-body .logo, #cards .cards .card .card-body .details .body-3 .btn-fav, #premium .container .cards .card .card-body .details .body-3 .btn-fav, #other .container .cards .card .card-body .details .body-3 .btn-fav, .navbar-2 .container ul li a, #letter .letter-box .letter-text-box .input-box .button {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -284,13 +284,13 @@
 
 #letter .letter-box .letter-text-box .input-box {
   position: relative;
-  margin-top: 7%;
+  margin-top: 6%;
 }
 
 #letter .letter-box .letter-text-box .input-box input {
   outline: none;
   cursor: pointer;
-  width: 470px;
+  width: 400px;
   height: 62px;
   border-radius: 4px;
   border: none;
@@ -305,17 +305,18 @@
   color: gray;
 }
 
-#letter .letter-box .letter-text-box .input-box .btn {
-  right: 1%;
-  top: 10%;
-  position: absolute;
-  height: 50px;
-  background-color: #233A95;
+#letter .letter-box .letter-text-box .input-box .button {
+  color: gray;
+  background-color: #08228a;
+  height: 62px;
   border: none;
+  border-radius: 4px;
+  font-size: 15px;
+  padding: 20px;
 }
 
-#letter .letter-box .letter-text-box .input-box .btn:hover {
-  background-color: #08228a;
+#letter .letter-box .letter-text-box .input-box .button:hover {
+  color: white;
 }
 
 #letter .letter-box img {
