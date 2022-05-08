@@ -1,220 +1,180 @@
-body {
-    @extend #body;
-}
-
 html {
+    @extend #transition;
     @extend #html;
     @extend #scrollTop;
 }
 
-/// HEADER PART START
-.navbar-1 {
-    background-color: $color-blue-light;
-    border-bottom: 1px solid $color-blue; //////////
-    padding: 4px;
-
-    .container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        text-align: center;
-        white-space: nowrap;
-
-        .logo {
-            a {
-                img {
-                    height: 50px;
-                }
-            }
-        }
-
-        .search-box {
-
-        }
-
-        .fav {
-            a {
-                color: $color-grey-light;
-
-                i {
-                    color: $color-grey-light;
-                }
-
-                &:hover {
-                    i {
-                        color: $color-red;
-                    }
-
-                    color: $color-white;
-                }
-            }
-        }
-
-        .add {
-            a {
-                color: $color-grey-light;
-
-                span {
-                    &:hover {
-                        i {
-                            color: $color-green;
-                        }
-
-                        color: $color-white;
-                    }
-                }
-            }
-        }
-
-        .account {
-            a {
-                color: $color-grey-light;
-
-                i {
-                    color: $color-grey-light;
-                }
-
-                &:hover {
-                    i {
-                        color: $color-purple;
-                    }
-
-                    color: $color-white;
-                }
-            }
-        }
-
-        .buy-vip {
-            a {
-                color: $color-grey-light;
-
-                &:hover {
-                    .VIP {
-                        color: $color-yellow-2;
-                    }
-
-                    color: $color-white;
-                }
-            }
-        }
-    }
+body {
+    @extend #body;
 }
-
+.navbar-1{
+    
+}
 .navbar-2 {
-    background-color: $color-blue-light;
+    padding: 0;
+    background-color: $color-first;
 
-    .container {
-        text-align: center;
-
-        ul {
-            padding: 13px;
-
-            li {
-                a {
-                    white-space: nowrap;
-                    color: $color-grey-light;
-                    padding: 15px;
-                    padding-left: 30px;
-                    padding-right: 30px;
-                    @extend #transition;
-
-                    &:hover {
-                        color: $color-white;
-                        background-color: $color-blue;
-                    }
-                }
-            }
-        }
-    }
-}
-
-/// HEADER PART END
-
-/// MAIN PART START
-#premium {
-    margin-top: 2%;
-
-    .container {
-        @extend #body-header;
-        @extend #cards;
-    }
-}
-
-#other {
-    margin-top: 2%;
-
-    .container {
-        @extend #body-header;
-        @extend #cards;
-    }
-}
-
-/// MAIN PART END
-
-/// FOOTER PART START
-#letter {
-    margin-top: 8%;
-
-    .letter-box {
+    .nav {
+        justify-content: space-around;
         width: 100%;
-        height: 250px;
-        background-color: $color-blue-light;
+        height: 74px;
         position: relative;
 
-        .letter-text-box {
-            position: absolute;
-            z-index: 100;
-            left: 10%;
-            top: 35%;
-            color: $color-white;
+        .nav-header {
 
-            .input-box {
-                position: relative;
-                margin-top: 6%;
+            display: inline;
 
-                input {
-                    outline: none;
-                    cursor: pointer;
-                    width: 400px;
-                    height: 62px;
-                    border-radius: 4px;
-                    border: none;
-                    padding-left: 50px;
-                }
+            .nav-title {
 
-                i {
-                    position: absolute;
-                    top: 31%;
-                    font-size: 25px;
-                    left: 2%;
-                    color: $color-gray;
-                }
+                display: inline-block;
 
-                .button {
-                    color: $color-gray;
-                    background-color: $color-blue;
-                    height: 62px;
-                    border: none;
-                    border-radius: 4px;
-                    @extend #transition;
-                    font-size: 15px;
-                    padding: 20px;
-                    &:hover {
-                        color: $color-white;
-                    }
+                img {
+                    height: 50px;
+                    padding: 5px;
                 }
             }
         }
 
-        img {
+        .nav-btn {
+            display: none;
+        }
+
+        .nav-links {
+            display: inline;
+            float: right;
+            font-size: 18px;
+
+            a {
+                i {
+                    display: block;
+                    text-align: center;
+                    font-size: 25px;
+                    padding-bottom: 3px;
+                }
+
+                font-size: 15px;
+                display: inline-block;
+                padding: 12px 10px 11px 10px;
+                text-decoration: none;
+                color: $color-third;
+                @extend #transition;
+
+                &:hover {
+                    background-color: $color-second;
+                }
+            }
+        }
+
+        #nav-check {
+            display: none;
+        }
+    }
+
+    @media (max-width:1000px) {
+        .nav {
+            height: 50px;
+        }
+
+        .nav>.nav-btn {
+            display: inline-block;
             position: absolute;
-            right: 11%;
-            top: 2%;
-            height: 245px;
-            bottom: 0%;
-            z-index: 1;
+            right: 0px;
+            top: 0px;
+        }
+
+        .nav>.nav-btn>label {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            padding: 13px;
+        }
+
+        .nav>.nav-btn>label:hover,
+        .nav #nav-check:checked~.nav-btn>label {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .nav>.nav-btn>label>span {
+            display: block;
+            width: 25px;
+            height: 10px;
+            border-top: 2px solid #eee;
+        }
+
+        .nav>.nav-links {
+            position: absolute;
+            display: block;
+            width: 100%;
+            background-color: #333;
+            height: 0px;
+            transition: all 0.3s ease-in;
+            overflow-y: hidden;
+            top: 50px;
+            left: 0px;
+
+        }
+
+        .nav>.nav-links>a {
+            display: block;
+            display: flex;
+            width: 100%;
+            font-size: 25px;
+            align-items: center;
+            border-bottom: 1px solid $color-second;
+
+            i {
+                margin-right: 20px;
+                margin-left: 10px;
+            }
+        }
+
+        .nav>#nav-check:not(:checked)~.nav-links {
+            height: 0px;
+        }
+
+        .nav>#nav-check:checked~.nav-links {
+            height: calc(100vh - 50px);
+            overflow-y: auto;
         }
     }
 }
 
-/// FOOTER PART END
+.navbar-3 {
+    margin-top: 20px;
+
+    .container {
+        // align-items: center;
+        display: flex;
+        justify-content: center;
+
+        form {
+            display: flex;
+
+            input[type="search"]::-webkit-search-decoration,
+            input[type="search"]::-webkit-search-cancel-button,
+            input[type="search"]::-webkit-search-results-button,
+            input[type="search"]::-webkit-search-results-decoration {
+                display: none;
+            }
+
+            input {
+                border: none;
+                outline: none;
+                width: 100%;
+                height: 50px;
+                border-radius: 0 0 0 20px;
+                padding-left: 13px;
+                padding-right: 13px;
+            }
+
+            button {
+                border-radius: 0 20px 0 0;
+
+                background-color: $color-white;
+                padding: 13px;
+                border: none;
+                width: 54px;
+            }
+        }
+    }
+}
