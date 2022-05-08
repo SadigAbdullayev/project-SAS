@@ -8,7 +8,7 @@
     }
 
     ::-webkit-scrollbar-thumb:hover {
-        color: $color-third;
+        color: $color-bg;
         background-color: $color-second;
     }
 
@@ -19,7 +19,7 @@
 
 #body {
     height: 100vh;
-    background-color: $color-third;
+    background-color: $color-bg;
 
     a {
         text-decoration: none;
@@ -56,7 +56,7 @@
 
         &:hover {
             background-color: $color-second;
-            color: $color-third;
+            color: $color-white;
         }
 
         i {

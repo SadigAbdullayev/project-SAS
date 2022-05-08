@@ -7,9 +7,95 @@ html {
 body {
     @extend #body;
 }
-.navbar-1{
-    
+
+.navbar-1 {
+    background-color: $color-first;
+    padding: 4px;
+    border-bottom: 1px solid $color-black;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        white-space: nowrap;
+
+        .logo {
+            a {
+                img {
+                    height: 50px;
+                }
+            }
+        }
+
+        .fav {
+            a {
+                color: $text-color;
+
+                i {
+                    color: $text-color;
+                }
+
+                &:hover {
+                    i {
+                        color: $color-red;
+                    }
+
+                    color: $text-color;
+                }
+            }
+        }
+
+        .add {
+            a {
+                color: $text-color;
+
+                span {
+                    &:hover {
+                        i {
+                            color: $color-green;
+                        }
+
+                    }
+                }
+            }
+        }
+
+        .account {
+            a {
+                color: $text-color;
+
+
+                i {
+                    color: $text-color;
+                }
+
+                &:hover {
+                    i {
+                        color: $color-purple;
+                    }
+
+                    color: $text-color;
+                }
+            }
+        }
+
+        .buy-vip {
+            a {
+                color: $text-color;
+
+                &:hover {
+                    .VIP {
+                        color: $color-yellow;
+                    }
+
+                    color: $text-color;
+                }
+            }
+        }
+    }
 }
+
 .navbar-2 {
     padding: 0;
     background-color: $color-first;
@@ -54,9 +140,12 @@ body {
 
                 font-size: 15px;
                 display: inline-block;
-                padding: 12px 10px 11px 10px;
+                padding-top: 12px;
+                padding-right: 20px;
+                padding-bottom:11px;
+                padding-left: 20px;
                 text-decoration: none;
-                color: $color-third;
+                color: $text-color;
                 @extend #transition;
 
                 &:hover {
@@ -73,59 +162,53 @@ body {
     @media (max-width:1000px) {
         .nav {
             height: 50px;
-        }
-
-        .nav>.nav-btn {
-            display: inline-block;
-            position: absolute;
-            right: 0px;
-            top: 0px;
-        }
-
-        .nav>.nav-btn>label {
-            display: inline-block;
-            width: 50px;
-            height: 50px;
-            padding: 13px;
+            .nav-btn {
+                display: inline-block;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                label {
+                    display: inline-block;
+                    width: 50px;
+                    height: 50px;
+                    padding: 13px;
+                    span {
+                        display: block;
+                        width: 25px;
+                        height: 10px;
+                        border-top: 2px solid #eee;
+                    }
+                }
+            }
+            .nav-links {
+                position: absolute;
+                display: block;
+                width: 100%;
+                background-color: #333;
+                height: 0px;
+                transition: all 0.3s ease-in;
+                overflow-y: hidden;
+                top: 50px;
+                left: 0px;
+                a {
+                    display: block;
+                    display: flex;
+                    width: 100%;
+                    font-size: 25px;
+                    align-items: center;
+                    border-bottom: 1px solid $color-second;
+        
+                    i {
+                        margin-right: 20px;
+                        margin-left: 10px;
+                    }
+                }
+            }
         }
 
         .nav>.nav-btn>label:hover,
         .nav #nav-check:checked~.nav-btn>label {
             background-color: rgba(0, 0, 0, 0.3);
-        }
-
-        .nav>.nav-btn>label>span {
-            display: block;
-            width: 25px;
-            height: 10px;
-            border-top: 2px solid #eee;
-        }
-
-        .nav>.nav-links {
-            position: absolute;
-            display: block;
-            width: 100%;
-            background-color: #333;
-            height: 0px;
-            transition: all 0.3s ease-in;
-            overflow-y: hidden;
-            top: 50px;
-            left: 0px;
-
-        }
-
-        .nav>.nav-links>a {
-            display: block;
-            display: flex;
-            width: 100%;
-            font-size: 25px;
-            align-items: center;
-            border-bottom: 1px solid $color-second;
-
-            i {
-                margin-right: 20px;
-                margin-left: 10px;
-            }
         }
 
         .nav>#nav-check:not(:checked)~.nav-links {
@@ -169,7 +252,6 @@ body {
 
             button {
                 border-radius: 0 20px 0 0;
-
                 background-color: $color-white;
                 padding: 13px;
                 border: none;
