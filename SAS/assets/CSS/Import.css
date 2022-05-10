@@ -62,7 +62,7 @@
   margin: 2px;
 }
 
-#top, .navbar-3, #premium, #AD {
+#top, .navbar-3, #premium {
   margin-top: 20px;
 }
 
@@ -196,6 +196,8 @@
   display: inline;
   float: right;
   font-size: 18px;
+  height: calc(54vh - 50px);
+  overflow-y: auto;
 }
 
 .navbar-2 .nav .nav-links a {
@@ -217,7 +219,7 @@
 }
 
 .navbar-2 .nav .nav-links a:hover {
-  background-color: #3B4D59;
+  color: #3B4D59;
 }
 
 .navbar-2 .nav #nav-check {
@@ -625,9 +627,5 @@
   #footer-distributed-1 #footer-distributed-1 .footer-left p.footer-links {
     line-height: 1.8;
   }
-}
-
-#AD #carouselExampleControls .carousel-inner .carousel-item img {
-  height: 300px;
 }
 /*# sourceMappingURL=Import.css.map */
