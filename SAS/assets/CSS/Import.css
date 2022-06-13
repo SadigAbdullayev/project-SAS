@@ -17,7 +17,7 @@
   margin-top: 50px;
 }
 
-#bottom, #img-grid, #best-seller, #sent-email, #sent-email .container .header {
+#bottom, #img-grid, #best-seller, #sent-email {
   margin-bottom: 50px;
 }
 
@@ -146,6 +146,21 @@
   font-size: 20px;
 }
 
+@media (max-width: 600px) {
+  .navbar {
+    height: 150px;
+  }
+  .navbar .container .row .other {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 10px;
+  }
+}
+
 #img-grid .container .row {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -265,6 +280,7 @@
   background: none;
   border-bottom: 1px solid #2C2C2C;
   border-radius: 0;
+  border-left: 1px solid #2C2C2C;
 }
 
 #popular .container .row div .card img {
@@ -277,18 +293,34 @@
 #popular .container .row div .card .card-body {
   margin: 0;
   display: block;
+  width: 255px;
 }
 
 #popular .container .row div .card .card-body h3 {
-  font-size: 15px;
+  font-size: 13px;
+  font-weight: bold;
 }
 
 #popular .container .row div .card .card-body span {
   font-weight: bold;
 }
 
+#popular .container .row div .card .card-body div {
+  margin: 0;
+  margin-top: 40px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#popular .container .row div .card .card-body div a {
+  color: #2c2c2c;
+  text-decoration: underline;
+}
+
 #popular .container .row div .card .card-body .second-txt {
-  font-size: 13px;
+  font-weight: 400;
+  font-size: 12px;
 }
 
 #popular .container .button {
@@ -352,11 +384,6 @@
 
 #best-seller .container .row div .card .card-body .second-txt {
   font-size: 15px;
-}
-
-#sent-email .container .header {
-  font-size: 25px;
-  text-decoration: underline;
 }
 
 #sent-email .container .row form {

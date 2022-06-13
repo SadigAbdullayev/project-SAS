@@ -89,6 +89,23 @@ body {
             }
         }
     }
+
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        height: 150px;
+
+        .container {
+            .row {
+                .other {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
 }
 
 #img-grid {
@@ -204,29 +221,44 @@ body {
                     background: none;
                     border-bottom: 1px solid $color-first;
                     border-radius: 0;
+                    border-left: 1px solid $color-first;
 
                     img {
                         // width: 500px;
                         object-fit: cover;
                         width: auto;
-
                         height: 250px;
                     }
 
                     .card-body {
+                        // border-left: 1px solid $color-first;
                         margin: 0;
                         display: block;
+                        width: 255px;
 
                         h3 {
-                            font-size: 15px;
+                            font-size: 13px;
+                            font-weight: bold;
                         }
 
                         span {
                             font-weight: bold;
                         }
 
+                        div {
+                            margin: 0;
+                            margin-top: 40px;
+                            justify-content: space-between;
+
+                            a {
+                                color: $text-color-dark;
+                                text-decoration: underline;
+                            }
+                        }
+
                         .second-txt {
-                            font-size: 13px;
+                            font-weight: 400;
+                            font-size: 12px;
                         }
                     }
                 }
@@ -304,12 +336,6 @@ body {
     @extend #bottom;
 
     .container {
-        .header {
-            @extend #bottom;
-            font-size: 25px;
-            text-decoration: underline;
-        }
-
         .row {
             form {
                 text-align: center;
@@ -363,10 +389,12 @@ body {
             }
         }
     }
-    .center{
+
+    .center {
         text-align: center;
     }
-    .right{
+
+    .right {
         text-align: end;
     }
 }
