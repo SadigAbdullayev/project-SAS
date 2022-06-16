@@ -9,42 +9,58 @@ body {
 }
 
 
-.navbar {
-    height: 100px;
+.navbar-header {
     background-color: $color-first;
+    border-bottom: 2px solid $color-second;
 
     .container {
         .row {
             text-align: center;
 
-            .logo {
-                h3 {
+            .img-logo {
+                padding: 5px 0 5px;
+
+                img {
+                    height: 35px;
+                }
+
+                span {
                     color: $text-color;
-                    font-weight: 100;
                 }
             }
+        }
+    }
+}
 
-            .nav-list {
+.navbar-center {
+    background-color: $color-first;
+
+    .container {
+        .row {
+            .list {
+                height: 50px;
                 display: flex;
+                justify-content: center;
                 align-items: center;
-                text-align: center;
-
-                justify-content: space-around;
 
                 a {
+                    margin: 0px 10px 0px 10px;
+
                     span {
-                        // font-weight: bold;
                         color: $text-color;
-                        // padding: 10px;
-                        font-size: 15px;
                     }
                 }
             }
 
             .search {
+                display: flex;
+                justify-content: center;
+                height: 39px;
+
                 form {
+                    margin-top: 12px;
                     border-bottom: 1px solid $color-white;
-                    margin-top: 5px;
+                    width: 300px;
 
                     input[type="search"]::-webkit-search-decoration,
                     input[type="search"]::-webkit-search-cancel-button,
@@ -53,22 +69,23 @@ body {
                         display: none;
                     }
 
-                    i {
-                        margin-top: 4px;
-                        padding-bottom: 5px;
-                        z-index: 1;
-                        right: inherit;
-                        position: absolute;
-                        color: $color-white;
-                    }
-
                     input {
-                        color: $text-color;
-                        width: 85%;
-                        position: relative;
-                        background-color: $color-first;
+                        align-items: center;
+                        padding-left: 10px;
+                        width: 265px;
                         border: none;
                         outline: none;
+                        color: $text-color;
+                        background: none;
+                    }
+
+                    button {
+                        border: none;
+                        background: none;
+
+                        i {
+                            color: $icon-color ;
+                        }
                     }
                 }
             }
@@ -78,30 +95,34 @@ body {
                 align-items: center;
                 justify-content: end;
 
-                div {
-                    margin-left: 20px;
+                a {
+                    margin-right: 20px;
                 }
 
                 i {
                     color: $icon-color;
-                    font-size: 20px;
+                }
+
+                span {
+                    color: $text-color;
                 }
             }
         }
     }
-
 }
 
 @media (max-width: 600px) {
-    .navbar {
-        height: 150px;
+    .navbar-header {
+
 
         .container {
             .row {
-                .other {
+                .img-logo {
                     display: flex;
-                    justify-content: center;
-                    margin-top: 10px;
+
+                    span {
+                        font-size: 12px
+                    }
                 }
             }
         }
@@ -110,7 +131,6 @@ body {
 
 #img-grid {
     @extend #top;
-    @extend #bottom;
 
     .container {
         .row {
@@ -162,43 +182,89 @@ body {
     }
 }
 
-#p-shoes {
-    .img {
-        position: absolute;
+#popular-sneaker {
+    @extend #top;
 
-        img {
-            height: auto;
-            object-fit: cover;
-            width: 100%;
+    .container {
+        .header {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            text-decoration: underline;
         }
-    }
 
-    .btn {
-        position: relative;
-        left: 33%;
-        padding: 0;
-        margin: 0;
-        bottom: -280px;
+        .row {
 
-        a {
-            width: 500px;
-            padding: 8px;
-            padding-left: 50px;
-            padding-right: 50px;
-            border: 1px solid $color-white;
-            color: $text-color;
-            @extend #transition;
+            div {
+                display: flex;
+                justify-content: space-between;
+                justify-content: center;
+                margin-bottom: 20px;
 
-            &:hover {
-                background-color: $color-white;
-                color: $color-first;
+                .card {
+                    border: none;
+                    background: none;
+                    border-bottom: 1px solid $color-first;
+                    border-radius: 0;
+                    border-left: 1px solid $color-first;
+
+                    img {
+                        // width: 500px;
+                        object-fit: cover;
+                        width: auto;
+                        height: 250px;
+                    }
+
+                    .card-body {
+                        // border-left: 1px solid $color-first;
+                        margin: 0;
+                        display: block;
+                        width: 255px;
+
+                        h3 {
+                            font-size: 13px;
+                            font-weight: bold;
+                        }
+
+                        span {
+                            font-weight: bold;
+                        }
+
+                        div {
+                            margin: 0;
+                            margin-top: 40px;
+                            justify-content: space-between;
+
+                            a {
+                                color: $text-color-dark;
+                                text-decoration: underline;
+                            }
+                        }
+
+                        .second-txt {
+                            font-weight: 400;
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .button {
+            display: flex;
+            justify-content: center;
+
+            button {
+                text-decoration: underline;
+                border: none;
+                background: none;
             }
         }
     }
 }
 
-#popular {
-    margin-top: 28%;
+#popular-classic {
+    @extend #top;
 
     .container {
         .header {
@@ -324,6 +390,49 @@ body {
 
                         .second-txt {
                             font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#follow-us {
+    @extend #bottom;
+
+    .container {
+        .row {
+            display: block;
+            justify-content: center;
+            text-align: center;
+
+            .header {
+                @extend #bottom;
+            }
+
+            .social-medias {
+                a {
+                    padding: 35px;
+                    padding-bottom: 23px;
+                    padding-left: 23px;
+                    padding-right: 23px;
+                    @extend #transition;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    border: 1px solid $color-first;
+                    border-radius: 100px;
+
+                    i {
+                        color: $color-first;
+                        font-size: 35px;
+                    }
+
+                    &:hover {
+                        background-color: $color-first;
+
+                        i {
+                            color: $icon-color
                         }
                     }
                 }
